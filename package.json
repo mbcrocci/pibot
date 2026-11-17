@@ -1,0 +1,25 @@
+{
+  "name": "pibot",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "ready": "vp check && vp run -r test && vp run -r build",
+    "dev": "vp run -r --parallel --log labeled dev",
+    "dev:web": "vp run @pibot/web#dev",
+    "dev:server": "vp run @pibot/server#dev"
+  },
+  "devDependencies": {
+    "vite-plus": "catalog:"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.14.0",
+      "onFail": "download"
+    }
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  }
+}
